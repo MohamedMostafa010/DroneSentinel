@@ -1,0 +1,35 @@
+
+// ── Main component ─────────────────────────────────────────────────────────
+export default function Training() {
+  const [cfg, setCfg]              = useState(DEFAULT);
+  const [enabled, setEnabled]      = useState(DEFAULT_ENABLED);
+  const [trainCmd, setTrainCmdRaw] = useState(() => buildTrainCmd(DEFAULT, DEFAULT_ENABLED));
+  const [resumePath, setResumePath]= useState(DEFAULT_LAST_PT);
+  const [running, setRunning]      = useState(false);
+  const [log, setLog]              = useState([]);
+  const [progress, setProgress]    = useState(0);
+  const [epochInfo, setEpochInfo]  = useState({ current: 0, total: 0 });
+  const [copied, setCopied]        = useState(false);
+  const [liveMetrics, setLiveMetrics] = useState(null);
+  const [runDir, setRunDir]        = useState("");
+  const [elapsed, setElapsed]      = useState("");
+  const [startDisplay, setStartDisplay] = useState(""); // "HH:MM:SS" start label
+  const [batchInfo, setBatchInfo]  = useState(null);
+  // startTime stored in a ref so it never triggers a re-render (prevents timer resets)
+  const startTimeRef  = useRef(null);
+  const [evalCfg, setEvalCfg]      = useState({
+    data_yaml: "", model_pt: "", split: "test", imgsz: 640, device: "0",
+    save_json: false, save_txt: false,
+  });
+  const [evalCmd, setEvalCmdRaw]   = useState(() => buildEvalCmd({
+    data_yaml: "", model_pt: "", split: "test", imgsz: 640, device: "0",
+    save_json: false, save_txt: false,
+  }));
+  const [evalRunning, setEvalRunning] = useState(false);
+  const [evalLog, setEvalLog]       = useState([]);
+  const [evalCopied, setEvalCopied] = useState(false);
+  const evalLogRef    = useRef(null);
+  const allEvalLogRef = useRef([]);
+  const logRef        = useRef(null);
+  const allLogRef     = useRef([]);
+  const cmdEditRef    = useRef(false);
