@@ -232,24 +232,6 @@ For each validation batch, the **left** grid shows the ground-truth labels and t
 
 ---
 
-## :chart_with_upwards_trend: Performance at a Glance
-
-Everything above, summarized - all on a **single consumer GPU** with no specialized hardware:
-
-<div align="center">
-
-| :zap: **20–30 FPS** | :stopwatch: **&lt; 80 ms** | :dart: **97.8%** |
-|:---:|:---:|:---:|
-| real-time on a single laptop GPU | end-to-end detection latency | mAP@50 detection accuracy |
-| :white_check_mark: **~97%** | :lock: **AES-256** | :busts_in_silhouette: **3 roles** |
-| of drones correctly recalled | encryption across all stored data | enforced access control |
-
-</div>
-
-> *Runs in real time on a single consumer-grade GPU - no specialized hardware required. Higher-end hardware yields faster inference and extended detection range.*
-
----
-
 ## :bell: Alerts &amp; Reporting
 
 When a drone is detected, DroneSentinel doesn't just draw a box - it **notifies and documents**. Alerts are cooldown-gated to avoid spam, and every session can be exported in multiple formats.
@@ -393,6 +375,24 @@ npm start                      # opens http://localhost:3000
 - The encrypted `config/` (keys, settings, users) is **auto-generated** on first run - it is intentionally **not** shipped in this repo.
 - Add **Operator** / **Technical** users from the **Admin → Users** panel.
 - Pick your camera source (USB index, RTSP URL, or a video file) in the **Detection** tab and press **Start**.
+
+---
+
+## :chart_with_upwards_trend: Performance at a Glance
+
+Everything above, summarized - all on a **single consumer GPU** with no specialized hardware:
+
+<div align="center">
+
+| :zap: **20–30 FPS** | :stopwatch: **&lt; 80 ms** | :dart: **97.8%** |
+|:---:|:---:|:---:|
+| real-time on a single laptop GPU | end-to-end detection latency | mAP@50 detection accuracy |
+| :white_check_mark: **~97%** | :lock: **AES-256** | :busts_in_silhouette: **3 roles** |
+| of drones correctly recalled | encryption across all stored data | enforced access control |
+
+</div>
+
+> *Runs in real time on a single consumer-grade GPU - no specialized hardware required. Higher-end hardware yields faster inference and extended detection range.*
 
 ---
 
