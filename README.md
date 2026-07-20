@@ -372,4 +372,4 @@ Pull requests are welcome! Ideas for new camera integrations, drone classes, tra
 
 ## :book: License
 
-This project is released under the **MIT License** — see [LICENSE](LICENSE).
+This project is released under the **MIT License** - see [LICENSE](LICENSE).
