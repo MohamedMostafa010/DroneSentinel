@@ -24,13 +24,17 @@
 
 ## :bulb: The Idea — Covering the Blind Spots
 
-Traditional detection systems (radar, RF, acoustic) have **blind spots** — especially small, low-altitude drones directly overhead or up close. DroneSentinel places affordable cameras exactly where those systems can't see, adding **visual confirmation** as a second line of defense. The two diagrams below show the concept: radar leaves gaps (high and low), and our cameras cover them.
+Traditional detection systems (radar, RF, acoustic) have **blind spots** — especially small, low-altitude drones directly overhead or up close. DroneSentinel places affordable cameras exactly where those systems can't see, adding **visual confirmation** as a second line of defense. The two diagrams below show the concept.
 
 <p align="center">
-  <img src="assets/concept/sim_radar_blindspots.png" alt="Radar blind spots — high and low" width="48%"/>
-  <img src="assets/concept/sim_camera_coverage.png" alt="Our cameras cover those gaps" width="48%"/>
+  <img src="assets/concept/sim_radar_blindspots.png" alt="Radar blind spots — high and low" width="720"/>
 </p>
-<p align="center"><sub><strong>Left:</strong> radar leaves blind spots — high and low. &nbsp;·&nbsp; <strong>Right:</strong> upper &amp; lower DroneSentinel cameras cover those gaps.</sub></p>
+<p align="center"><sub><strong>1.</strong> Radar leaves blind spots — both high (altitude gap) and low (close proximity).</sub></p>
+
+<p align="center">
+  <img src="assets/concept/sim_camera_coverage.png" alt="DroneSentinel cameras cover the gaps" width="620"/>
+</p>
+<p align="center"><sub><strong>2.</strong> Upper &amp; lower DroneSentinel cameras cover exactly those radar blind spots — a second line of defense.</sub></p>
 
 - :white_check_mark: Camera-based gap-fixer where radar/RF/acoustic have blind spots
 - :white_check_mark: Works with off-the-shelf **USB webcams** and **RTSP IP cameras** — no specialized hardware
@@ -54,20 +58,20 @@ Traditional detection systems (radar, RF, acoustic) have **blind spots** — esp
 ## :movie_camera: Live Demos
 
 ### BoT-SORT Tracking — one persistent ID through occlusion
-This is the core proof of our tracker. A drone flies at night, disappears **behind foliage (occlusion)**, then reappears — and BoT-SORT keeps assigning it the **same Track ID #1** the whole time. The clip freezes and zooms on each detection to make the ID visible. *(Full, untrimmed.)*
+This is the core proof of our tracker. A drone flies at night, disappears **behind foliage (occlusion)**, then reappears — and BoT-SORT keeps assigning it the **same Track ID #1** the whole time. The clip freezes and zooms on each detection to make the ID visible. *(Full clip, untrimmed.)*
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/tracking_proof.mp4" controls muted width="760"></video>
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/output_tracking_proof.mp4" controls muted width="760"></video>
 </p>
 
 ### Live Analytics Dashboard — updating during a detection session
-The analytics dashboard updating in **real time** while a live detection session runs alongside — total drones, average confidence, alerts sent, and a live FPS history chart. *(Full, untrimmed.)*
+The analytics dashboard updating in **real time** while a live detection session runs alongside — total drones, average confidence, alerts sent, and a live FPS history chart. *(Full clip, untrimmed.)*
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/analytics_live.mp4" controls muted width="760"></video>
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/analytics_live.mp4" controls muted width="760"></video>
 </p>
 
-> :information_source: If a video shows as a link instead of a player, click it — GitHub streams it on the file page. All demo videos also live under [`assets/videos/`](assets/videos).
+> :information_source: Videos are hosted on the [**v1.0 Release**](../../releases/tag/v1.0) and stream inline here. If a player doesn't load, click it to open the video directly.
 
 ---
 
@@ -76,15 +80,15 @@ The analytics dashboard updating in **real time** while a live detection session
 A **single-page React application** — no install for the operator, just a browser. It shows the live MJPEG stream with boxes/IDs, real-time analytics, and a built-in User Guide. Access is **role-aware**: each user only sees the tabs their role permits, and unauthorized/unknown routes are handled with clean **403 / 404** pages.
 
 <p align="center">
-  <img src="assets/ui/user_guide.png" alt="Built-in User Guide" width="720"/>
+  <img src="assets/ui/user_guide.png" alt="Built-in User Guide" width="760"/>
 </p>
 <p align="center"><sub>Built-in User Guide — roles &amp; access control, camera setup, and troubleshooting, all inside the app.</sub></p>
 
 <p align="center">
-  <img src="assets/ui/403.png" alt="403 Access Denied" width="45%"/>
-  <img src="assets/ui/404.png" alt="404 Not Found" width="45%"/>
+  <img src="assets/ui/403.png" alt="403 Access Denied" width="46%"/>
+  <img src="assets/ui/404.png" alt="404 Not Found" width="46%"/>
 </p>
-<p align="center"><sub><strong>403 — Access Denied</strong> (role tries to open a tab it isn't allowed) &nbsp;·&nbsp; <strong>404 — Page Not Found</strong> (unknown route).</sub></p>
+<p align="center"><sub><strong>403 — Access Denied</strong> (role opens a tab it isn't allowed) &nbsp;·&nbsp; <strong>404 — Page Not Found</strong> (unknown route).</sub></p>
 
 ---
 
@@ -93,11 +97,11 @@ A **single-page React application** — no install for the operator, just a brow
 DroneSentinel runs on **off-the-shelf, consumer hardware** — no specialized rig. We tested it with two cameras: a plain USB webcam for primary capture, and a Wi-Fi pan-tilt camera as an RTSP source.
 
 <p align="center">
-  <img src="assets/hardware/rapoo_c280.jpg" alt="Rapoo C280" width="38%"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="assets/hardware/imou_ranger2c.jpg" alt="Imou Ranger 2C" width="38%"/>
+  <img src="assets/hardware/rapoo_c280.jpg" alt="Rapoo C280" height="240"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/hardware/imou_ranger2c.jpg" alt="Imou Ranger 2C" height="240"/>
 </p>
-<p align="center"><sub><strong>Rapoo C280</strong> — 1080p USB webcam · primary capture &nbsp;·&nbsp; <strong>Imou Ranger 2C</strong> — 360° Pan-Tilt Wi-Fi · RTSP test camera</sub></p>
+<p align="center"><sub><strong>Rapoo C280</strong> — 1080p USB webcam · primary capture &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Imou Ranger 2C</strong> — 360° Pan-Tilt Wi-Fi · RTSP test camera</sub></p>
 
 > We used the **Imou Ranger 2C** as an **RTSP source** — to test network connectivity and GPU video **encoding/decoding** across the pipeline (NVDEC/FFmpeg), proving the system works with real IP cameras, not just USB.
 
@@ -133,11 +137,11 @@ The model was fine-tuned on a merged dataset of **114,396 drone images**, combin
 **Composed from three public datasets** (obtained via Kaggle, GitHub & Roboflow):
 
 <p align="center">
-  <img src="assets/dataset/kaggle.png" alt="Kaggle" height="34"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/dataset/github.png" alt="GitHub" height="34"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/dataset/roboflow.png" alt="Roboflow" height="30"/>
+  <img src="assets/dataset/kaggle.png" alt="Kaggle" height="32"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/dataset/github.png" alt="GitHub" height="32"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/dataset/roboflow.png" alt="Roboflow" height="28"/>
 </p>
 
 <p align="center"><sub>Source datasets: <a href="https://github.com/ZhaoJ9014/Anti-UAV">Anti-UAV-RGBT 300</a> · <a href="https://github.com/wangdongdut/DUT-Anti-UAV">DUT Anti-UAV</a> · <a href="https://wosdetc2023.wordpress.com/">Drone-vs-Bird</a></sub></p>
@@ -146,7 +150,7 @@ The model was fine-tuned on a merged dataset of **114,396 drone images**, combin
 
 <p align="center">
   <a href="https://www.kaggle.com/datasets/mohamedmostafa10110/dronesentinel-training-v2" target="_blank">
-    <img src="assets/dataset/kaggle.png" alt="Kaggle Dataset" width="170"/>
+    <img src="assets/dataset/kaggle.png" alt="Kaggle Dataset" width="160"/>
   </a>
   <br/>
   <a href="https://www.kaggle.com/datasets/mohamedmostafa10110/dronesentinel-training-v2"><strong>kaggle.com/datasets/mohamedmostafa10110/dronesentinel-training-v2</strong></a>
@@ -172,25 +176,35 @@ Evaluated on the held-out validation set (**18,959 images**):
 
 ### Training Results
 
-Training and validation curves over 60 epochs — losses fall steadily while precision, recall, and mAP climb and plateau near the top, with **no over-fitting gap** between train and validation. The Precision–Recall curve hugs the top-right corner (**mAP@50 = 0.978**), the ideal shape.
+Training and validation curves over 60 epochs — losses fall steadily while precision, recall, and mAP climb and plateau near the top, with **no over-fitting gap** between train and validation.
 
 <p align="center">
-  <img src="assets/model/training_curves.png" alt="Training & validation curves" width="60%"/>
-  <img src="assets/model/pr_curve.png" alt="Precision-Recall curve" width="34%"/>
+  <img src="assets/model/training_curves.png" alt="Training & validation curves" width="820"/>
+</p>
+
+The Precision–Recall curve hugs the top-right corner (**mAP@50 = 0.978**) — the ideal shape.
+
+<p align="center">
+  <img src="assets/model/pr_curve.png" alt="Precision-Recall curve" width="560"/>
 </p>
 
 ### Detection Quality — Confusion &amp; Labels
 
-The confusion matrix shows the model caught **17,923** real drones (true positives), missed only **473** (false negatives), with **1,059** false alarms — a **~5.6% false-positive rate** and **~97.4% recall**. The label chart shows the dataset holds **74,507** drone instances, mostly **small and centered** in frame — the realistic, difficult case.
+The confusion matrix shows the model caught **17,923** real drones (true positives), missed only **473** (false negatives), with **1,059** false alarms — a **~5.6% false-positive rate** and **~97.4% recall**.
 
 <p align="center">
-  <img src="assets/model/confusion_matrix.png" alt="Confusion matrix" width="46%"/>
-  <img src="assets/model/label_distribution.jpg" alt="Label & bounding-box distribution" width="46%"/>
+  <img src="assets/model/confusion_matrix.png" alt="Confusion matrix" width="620"/>
+</p>
+
+The label chart shows the dataset holds **74,507** drone instances, mostly **small and centered** in frame — the realistic, difficult case.
+
+<p align="center">
+  <img src="assets/model/label_distribution.jpg" alt="Label & bounding-box distribution" width="560"/>
 </p>
 
 ### Training Batches — Augmented Inputs
 
-A sanity check on the data pipeline: each training batch is built from **mosaic + mixup augmentation** (multiple images stitched together, color/scale jitter), which teaches the model to detect drones in cluttered, varied conditions.
+A sanity check on the data pipeline: each training batch is built from **mosaic + mixup augmentation** (multiple images stitched together, color/scale jitter), teaching the model to detect drones in cluttered, varied conditions.
 
 <p align="center">
   <img src="assets/model/train_batch0.jpg" alt="Training batch 0" width="32%"/>
@@ -220,28 +234,36 @@ For each validation batch, the **left** grid shows the ground-truth labels and t
 
 ## :chart_with_upwards_trend: Performance at a Glance
 
-Everything above, summarized: real-time speed, low latency, high accuracy, strong recall, encrypted storage, and role-based access — all on a **single consumer GPU** with no specialized hardware.
+Everything above, summarized — all on a **single consumer GPU** with no specialized hardware:
 
-<p align="center">
-  <img src="assets/outcomes/performance_at_a_glance.png" alt="Performance at a glance" width="820"/>
-</p>
+<div align="center">
+
+| :zap: **20–30 FPS** | :stopwatch: **&lt; 80 ms** | :dart: **97.8%** |
+|:---:|:---:|:---:|
+| real-time on a single laptop GPU | end-to-end detection latency | mAP@50 detection accuracy |
+| :white_check_mark: **~97%** | :lock: **AES-256** | :busts_in_silhouette: **3 roles** |
+| of drones correctly recalled | encryption across all stored data | enforced access control |
+
+</div>
+
+> *Runs in real time on a single consumer-grade GPU — no specialized hardware required. Higher-end hardware yields faster inference and extended detection range.*
 
 ---
 
 ## :bell: Alerts &amp; Reporting
 
-When a drone is detected, DroneSentinel doesn't just draw a box — it **notifies and documents**. Alerts are cooldown-gated to avoid spam, and every session can be exported in multiple formats for records and analysis.
+When a drone is detected, DroneSentinel doesn't just draw a box — it **notifies and documents**. Alerts are cooldown-gated to avoid spam, and every session can be exported in multiple formats.
 
 ### Automated Email Alerts
 An **instant email** fires the moment a drone is confirmed, and a **session-summary email** is sent when detection stops (totals, duration, alerts).
 
 <p align="center">
-  <img src="assets/reporting/email_instant.png" alt="Instant email alert" width="600"/>
+  <img src="assets/reporting/email_instant.png" alt="Instant email alert" width="620"/>
 </p>
 <p align="center"><sub>Instant drone-detected email alert.</sub></p>
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/email_summary.mp4" controls muted width="600"></video>
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/email_summary.mp4" controls muted width="620"></video>
 </p>
 <p align="center"><sub>Session-summary email — sent automatically when a detection session ends.</sub></p>
 
@@ -249,23 +271,31 @@ An **instant email** fires the moment a drone is confirmed, and a **session-summ
 Every session exports to **CSV** and **JSON** (data/integration) and to **HTML** and **PDF** (human-readable reports).
 
 <p align="center">
-  <img src="assets/reporting/csv_export.png" alt="CSV export" width="45%"/>
-  <img src="assets/reporting/json_export.png" alt="JSON export" width="45%"/>
+  <img src="assets/reporting/csv_export.png" alt="CSV export" width="820"/>
 </p>
-<p align="center"><sub><strong>CSV</strong> (left) and <strong>JSON</strong> (right) exports — session records, FPS, and drone data.</sub></p>
+<p align="center"><sub>CSV export — session records, FPS, and per-drone data.</sub></p>
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/html_export.mp4" controls muted width="45%"></video>
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/pdf_export.mp4" controls muted width="45%"></video>
+  <img src="assets/reporting/json_export.png" alt="JSON export" width="700"/>
 </p>
-<p align="center"><sub><strong>HTML</strong> (left) and <strong>PDF</strong> (right) report exports.</sub></p>
+<p align="center"><sub>JSON export — the same data, structured for integration.</sub></p>
+
+<p align="center">
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/html_export.mp4" controls muted width="720"></video>
+</p>
+<p align="center"><sub>HTML report export.</sub></p>
+
+<p align="center">
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/pdf_export.mp4" controls muted width="620"></video>
+</p>
+<p align="center"><sub>PDF report export.</sub></p>
 
 ### Real-World Field Tests
 We validated DroneSentinel outdoors against a real drone — in **daytime** and at **night** — confirming it detects and tracks in real conditions, not just on the validation set.
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/field_test_daytime.mp4" controls muted width="45%"></video>
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/raw/main/assets/videos/field_test_nighttime.mp4" controls muted width="45%"></video>
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/field_test_daytime.mp4" controls muted width="46%"></video>
+  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/field_test_nighttime.mp4" controls muted width="46%"></video>
 </p>
 <p align="center"><sub><strong>Daytime</strong> (left) and <strong>Nighttime</strong> (right) real-world field tests.</sub></p>
 
@@ -315,8 +345,8 @@ DroneSentinel is a **client–server** system. React sends a request; a backgrou
 
 ```plaintext
 DroneSentinel/
-├── assets/                          # README media (images, demo videos, plots)
-│   ├── concept/  ui/  hardware/  dataset/  model/  outcomes/  reporting/  videos/
+├── assets/                          # README media (images, plots) — videos live on the Release
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/
 ├── dronesentinel/
 │   ├── backend/
 │   │   ├── app/                     # FastAPI: routes, services, workers, auth, encryption
