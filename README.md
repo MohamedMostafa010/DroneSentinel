@@ -61,17 +61,17 @@ Traditional detection systems (radar, RF, acoustic) have **blind spots** — esp
 This is the core proof of our tracker. A drone flies at night, disappears **behind foliage (occlusion)**, then reappears — and BoT-SORT keeps assigning it the **same Track ID #1** the whole time. The clip freezes and zooms on each detection to make the ID visible. *(Full clip, untrimmed.)*
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/output_tracking_proof.mp4" controls muted width="760"></video>
+  <img src="assets/demos/tracking_proof.gif" alt="BoT-SORT tracking proof" width="760"/>
 </p>
 
 ### Live Analytics Dashboard — updating during a detection session
 The analytics dashboard updating in **real time** while a live detection session runs alongside — total drones, average confidence, alerts sent, and a live FPS history chart. *(Full clip, untrimmed.)*
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/analytics_live.mp4" controls muted width="760"></video>
+  <img src="assets/demos/analytics_live.gif" alt="Live analytics dashboard" width="760"/>
 </p>
 
-> :information_source: Videos are hosted on the [**v1.0 Release**](../../releases/tag/v1.0) and stream inline here. If a player doesn't load, click it to open the video directly.
+> :information_source: The clips throughout this README are **inline GIF previews** (full length, untrimmed). The original **full-quality MP4s** are attached to the [**v1.0 Release**](../../releases/tag/v1.0) for download.
 
 ---
 
@@ -263,7 +263,7 @@ An **instant email** fires the moment a drone is confirmed, and a **session-summ
 <p align="center"><sub>Instant drone-detected email alert.</sub></p>
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/email_summary.mp4" controls muted width="620"></video>
+  <img src="assets/demos/email_summary.gif" alt="Session-summary email" width="620"/>
 </p>
 <p align="center"><sub>Session-summary email — sent automatically when a detection session ends.</sub></p>
 
@@ -281,12 +281,12 @@ Every session exports to **CSV** and **JSON** (data/integration) and to **HTML**
 <p align="center"><sub>JSON export — the same data, structured for integration.</sub></p>
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/html_export.mp4" controls muted width="720"></video>
+  <img src="assets/demos/html_export.gif" alt="HTML report export" width="720"/>
 </p>
 <p align="center"><sub>HTML report export.</sub></p>
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/pdf_export.mp4" controls muted width="620"></video>
+  <img src="assets/demos/pdf_export.gif" alt="PDF report export" width="620"/>
 </p>
 <p align="center"><sub>PDF report export.</sub></p>
 
@@ -294,8 +294,8 @@ Every session exports to **CSV** and **JSON** (data/integration) and to **HTML**
 We validated DroneSentinel outdoors against a real drone — in **daytime** and at **night** — confirming it detects and tracks in real conditions, not just on the validation set.
 
 <p align="center">
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/field_test_daytime.mp4" controls muted width="46%"></video>
-  <video src="https://github.com/MohamedMostafa010/DroneSentinel/releases/download/v1.0/field_test_nighttime.mp4" controls muted width="46%"></video>
+  <img src="assets/demos/field_test_daytime.gif" alt="Daytime field test" width="46%"/>
+  <img src="assets/demos/field_test_nighttime.gif" alt="Nighttime field test" width="46%"/>
 </p>
 <p align="center"><sub><strong>Daytime</strong> (left) and <strong>Nighttime</strong> (right) real-world field tests.</sub></p>
 
@@ -345,8 +345,8 @@ DroneSentinel is a **client–server** system. React sends a request; a backgrou
 
 ```plaintext
 DroneSentinel/
-├── assets/                          # README media (images, plots) — videos live on the Release
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/
+├── assets/                          # README media — full-quality MP4s live on the Release
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
 ├── dronesentinel/
 │   ├── backend/
 │   │   ├── app/                     # FastAPI: routes, services, workers, auth, encryption
