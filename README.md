@@ -258,26 +258,10 @@ npm start                      # opens http://localhost:3000
 
 ---
 
-## :busts_in_silhouette: Team &amp; Supervision
-
-**Graduation Project — Cybersecurity Major**
-College of Computing and Information Technology (CCIT), AASTMT — Smart Village, 2026
-
-<div align="center">
-
-**Mohamed Mostafa Sayed** &nbsp;·&nbsp; **Abdelrahman Ahmed Sayed** &nbsp;·&nbsp; **Basel Hany Abdullah**  
-**Abdallah Mohamed Beshr** &nbsp;·&nbsp; **Hazem Ahmed Bakr** &nbsp;·&nbsp; **Mohamed Hany El Kordy**
-
-</div>
-
-**Supervisor:** Assoc. Prof. Ahmed Maher
-
----
-
 ## :handshake: Contributing
 
 Pull requests are welcome! Ideas for new camera integrations, drone classes, tracking improvements, or deployment targets (edge / Docker) are appreciated.
 
 ## :book: License
 
-This project is released under the **MIT License** — see [LICENSE](LICENSE).
+This project is released under the **MIT License** - see [LICENSE](LICENSE).
