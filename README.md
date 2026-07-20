@@ -317,9 +317,9 @@ DroneSentinel is a **client–server** system. React sends a request; a backgrou
 
 ## :gear: Tech Stack
 
-**AI / Detection:** YOLOv26s (PyTorch) · BoT-SORT (Kalman + Re-ID) · OpenCV (capture, annotation, MJPEG)
-**Backend:** FastAPI · Uvicorn · Pydantic · PyCryptodome (AES-256) · python-jose (JWT) · SQLite · pandas · ReportLab
-**Frontend:** React 18 · Material-UI · Recharts · Axios · React Router
+- **AI / Detection:** YOLOv26s (PyTorch) & BoT-SORT (Kalman + Re-ID) & OpenCV (capture, annotation, MJPEG)
+- **Backend:** FastAPI & Uvicorn & Pydantic & PyCryptodome (AES-256) & python-jose (JWT) & SQLite & pandas & ReportLab
+- **Frontend:** React 18 & Material-UI & Recharts & Axios & React Router
 
 ---
 
@@ -328,6 +328,12 @@ DroneSentinel is a **client–server** system. React sends a request; a backgrou
 ```plaintext
 DroneSentinel/
 ├── assets/                          # README media - full-quality MP4s live on the Release
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
 │   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
 ├── dronesentinel/
 │   ├── backend/
