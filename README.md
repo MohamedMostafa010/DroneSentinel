@@ -328,13 +328,13 @@ DroneSentinel is a **client–server** system. React sends a request; a backgrou
 ```plaintext
 DroneSentinel/
 ├── assets/                          # README media - full-quality MP4s live on the Release
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
-│   ├── concept/  ui/  hardware/  dataset/  model/  reporting/  demos/  (GIF previews)
+│   ├── concept/
+│   ├── ui/
+│   ├── hardware/
+│   ├── dataset/
+│   ├── model/
+│   ├── reporting/
+│   ├── demos/  (GIF previews)
 ├── dronesentinel/
 │   ├── backend/
 │   │   ├── app/                     # FastAPI: routes, services, workers, auth, encryption
