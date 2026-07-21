@@ -359,9 +359,12 @@ DroneSentinel/
 │   │   ├── requirements.txt
 │   │   └── yolo26s.pt               # fine-tuned drone model (~20 MB)
 │   └── frontend/
-│       ├── src/  public/            # React app
+│       ├── src/                     # React app
+│       ├── public/
 │       ├── package.json
 │       └── .env.example
+│       └── package-lock.json
+│       └── package.json
 ├── models/                          # trained weights - best.pt / best.onnx / TensorRT .engine (FP16/FP32)
 ├── .gitignore
 ├── LICENSE
