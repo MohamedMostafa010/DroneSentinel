@@ -118,6 +118,22 @@ A **YOLOv26s** detector, fine-tuned end-to-end specifically for drones (single c
 
 > :package: **Trained weights are included** in [`models/`](models) in four formats - PyTorch (`best.pt`), ONNX (`best.onnx`), and TensorRT FP16/FP32 engines (`best_hf.engine` / `best_nf.engine`). See [`models/README.md`](models/README.md) for which to use.
 
+### Trained Model Weights - YOLOv26s
+
+All four files are the **same fine-tuned DroneSentinel model** (single class: `drone`, trained at 960×960) - just exported to different formats for different runtimes. `best.pt` is the source; the rest are optimized/portable exports of it.
+
+| File | Format | Precision | Size | Use it for |
+|------|--------|:---------:|:----:|-----------|
+| **`best.pt`** | PyTorch | FP32 | ~20 MB | The primary weights. This is what the app loads (shipped as `dronesentinel/backend/yolo26s.pt`). Runs anywhere PyTorch + CUDA is available. |
+| **`best.onnx`** | ONNX | FP32 | ~38 MB | Framework-agnostic export - run with ONNX Runtime on CPU/GPU across platforms, or convert to other runtimes. |
+| **`best_hf.engine`** | TensorRT | **FP16 (half)** | ~25 MB | Fastest inference on NVIDIA GPUs - half precision, smallest engine. |
+| **`best_nf.engine`** | TensorRT | **FP32 (full)** | ~47 MB | Higher-precision TensorRT engine - full precision, larger. |
+
+#### Notes
+- **Start with `best.pt`** - it's the most portable and is what the application uses out of the box.
+- **The `.engine` files are hardware- and version-specific.** A TensorRT engine is built for a particular GPU + TensorRT/CUDA version, so it may not load on a different machine. If a `.engine` fails to load, rebuild it from `best.onnx` (or `best.pt`) on your own hardware.
+- Metrics for this model: **mAP@50 = 97.8%**, **mAP@50–95 = 68.1%**, **Precision = 96.9%**, **Recall = 95.7%**, **Best F1 = 96.1%**.
+
 ### Dataset
 
 The model was fine-tuned on a merged dataset of **114,396 drone images**, combining three public UAV datasets, then split for training, validation, and testing.
@@ -347,7 +363,6 @@ DroneSentinel/
 │       ├── package.json
 │       └── .env.example
 ├── models/                          # trained weights - best.pt / best.onnx / TensorRT .engine (FP16/FP32)
-│   └── README.md                    #   explains each format
 ├── .gitignore
 ├── LICENSE
 ├── README.md
