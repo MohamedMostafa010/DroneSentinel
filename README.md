@@ -344,7 +344,9 @@ DroneSentinel/
 │       ├── src/  public/            # React app
 │       ├── package.json
 │       └── .env.example
-├── .gitignore  ·  LICENSE  ·  README.md
+├── .gitignore
+├── LICENSE
+├── README.md
 ```
 
 ---
