@@ -297,7 +297,7 @@ We validated DroneSentinel outdoors against a real drone - in **daytime** and at
   <img src="assets/demos/field_test_daytime.gif" alt="Daytime field test" width="46%"/>
   <img src="assets/demos/field_test_nighttime.gif" alt="Nighttime field test" width="46%"/>
 </p>
-<p align="center"><sub><strong>Daytime</strong> (left) and <strong>Nighttime</strong> (right) real-world field tests.</sub></p>
+<p align="center"><sub><strong>Daytime - 18 meters range</strong> (left) and <strong>Nighttime - 12 meters range</strong> (right) real-world field tests.</sub></p>
 
 ---
 
