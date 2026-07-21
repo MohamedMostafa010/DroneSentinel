@@ -27,6 +27,10 @@ epoch*.pt
 last.pt
 best.pt
 
+# ...but DO publish the exported model weights under models/
+!models/
+!models/**
+
 # ─── OS / Editor ────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db

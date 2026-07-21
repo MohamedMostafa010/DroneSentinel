@@ -116,6 +116,8 @@ A **YOLOv26s** detector, fine-tuned end-to-end specifically for drones (single c
 - **Trained on Colab (NVIDIA H100)** — 60 epochs, batch size 64
 - **Deployed on an RTX 4050** — real-time inference on a laptop GPU
 
+> :package: **Trained weights are included** in [`models/`](models) in four formats — PyTorch (`best.pt`), ONNX (`best.onnx`), and TensorRT FP16/FP32 engines (`best_hf.engine` / `best_nf.engine`). See [`models/README.md`](models/README.md) for which to use.
+
 ### Dataset
 
 The model was fine-tuned on a merged dataset of **114,396 drone images**, combining three public UAV datasets, then split for training, validation, and testing.
@@ -356,6 +358,8 @@ DroneSentinel/
 │       ├── src/  public/            # React app
 │       ├── package.json
 │       └── .env.example
+├── models/                          # trained weights: best.pt · best.onnx · TensorRT .engine (FP16/FP32)
+│   └── README.md                    #   explains each format — see it for details
 ├── .gitignore  ·  LICENSE  ·  README.md
 ```
 
